@@ -33,8 +33,12 @@ public void assign() {
     }
 
     public void createHashMap() {
-        for(int i=0;i<headlineObjects.size();i++) {
-            hashmap.put(i,headlineObjects.get(i));
+        for(int i=0;i<headlineObjects.size();i++) { // i is the key
+            String[] array = headlineObjects.get(i);
+            hashmap.put(i,array[0]); // headline
+            hashmap.put(i,array[1]); // keyword
+            hashmap.put(i,array[1] + array[2] + array[3] + array[4]); // answer choices
+
         }
     }
         public void shuffle() {
