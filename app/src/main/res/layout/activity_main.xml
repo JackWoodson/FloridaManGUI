@@ -20,48 +20,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.07" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Username"
-        app:layout_constraintBottom_toTopOf="@+id/usernameInput"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Password"
-        app:layout_constraintBottom_toTopOf="@+id/passwordInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="32dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
         android:layout_marginBottom="9dp"
-        app:layout_constraintBottom_toBottomOf="@+id/usernameInput"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName">
+        app:layout_constraintBottom_toBottomOf="@+id/user"
+        tools:layout_editor_absoluteX="167dp">
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/usernameInput"
+        android:id="@+id/user"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
         android:layout_marginBottom="242dp"
-        android:hint="insert"
+        android:hint="Username"
         app:layout_constraintBottom_toBottomOf="@+id/textInputLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,9 +60,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="223dp"
-        android:hint="type here"
+        android:hint="Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="603dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

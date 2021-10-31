@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class HeadlineBank {
-    HashMap<Object, Object> hashmap = new HashMap<Object, Object>();
+    public HashMap<Object, Object> hashmap = new HashMap<Object, Object>();
     public static List<String[]> headlineObjects = new ArrayList<String[]>();
     Headline hL = new Headline();
 public void assign() {
