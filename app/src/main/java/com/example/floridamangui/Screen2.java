@@ -6,13 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 import java.util.HashMap;
 
 public class Screen2 extends AppCompatActivity {
-
+    int correct = 0;
+    int incorrect;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +29,13 @@ public class Screen2 extends AppCompatActivity {
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
         Button button4 = findViewById(R.id.button4);
+        TextView correctScore = findViewById(R.id.textView4);
+        TextView incorrectScore = findViewById(R.id.textView5);
 
-        //TextView userName = firstPage.username;
+
+        TextView userName = firstPage.username;
+        TextView usernameDisplay = findViewById(R.id.usernameDisplay);
+        usernameDisplay.setText((CharSequence) userName);
 
         for(int i=0;i<20;i++) {
             headline.setText((String)hashmap.get(0));
@@ -36,7 +43,38 @@ public class Screen2 extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    correct++;
+                    Toast.makeText(getApplicationContext(), "Correct!",Toast.LENGTH_SHORT )
+                            .show();
+                    correctScore.setText(correct);
+                }
+            });
+            button2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    incorrect++;
+                    Toast.makeText(getApplicationContext(), "Incorrect!",Toast.LENGTH_SHORT )
+                            .show();
+                    incorrectScore.setText(incorrect);
+                }
+            });
+            button3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    incorrect++;
+                    Toast.makeText(getApplicationContext(), "Incorrect!",Toast.LENGTH_SHORT )
+                            .show();
+                    incorrectScore.setText(incorrect);
 
+                }
+            });
+            button4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    incorrect++;
+                    Toast.makeText(getApplicationContext(), "Incorrect!",Toast.LENGTH_SHORT )
+                            .show();
+                    incorrectScore.setText(incorrect);
 
                 }
             });

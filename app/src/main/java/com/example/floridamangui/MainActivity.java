@@ -11,14 +11,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    EditText username = (EditText) findViewById(R.id.user);
+    EditText password = (EditText) findViewById(R.id.passwordInput);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText username = (EditText) findViewById(R.id.user);
-        EditText password = (EditText) findViewById(R.id.passwordInput);
+
         Button button = findViewById(R.id.button5);
 
         button.setOnClickListener(new View.OnClickListener() {

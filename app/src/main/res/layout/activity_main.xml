@@ -24,9 +24,10 @@
         android:id="@+id/textInputLayout"
         android:layout_width="32dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="167dp"
         android:layout_marginBottom="9dp"
         app:layout_constraintBottom_toBottomOf="@+id/user"
-        tools:layout_editor_absoluteX="167dp">
+        app:layout_constraintStart_toStartOf="@+id/user">
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -69,8 +70,10 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="80dp"
         android:text="Start"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="603dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
