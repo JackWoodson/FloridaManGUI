@@ -1,13 +1,18 @@
 package com.example.floridamangui;
+import android.widget.EditText;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Collections;
 
 public class HeadlineBank {
-    public HashMap<Object, Object> hashmap = new HashMap<Object, Object>();
+    public HashMap<Integer, String[]> hashmap = new HashMap<Integer, String[]>();
     public static List<String[]> headlineObjects = new ArrayList<String[]>();
+    HashMap<Integer, EditText[]> players = new HashMap<Integer, EditText[]>();
     Headline hL = new Headline();
+    int highscore = 0;
+
 public void assign() {
     String[] closet = {"Florida Man trapped in unlocked closet for two days", "closet", "car", "vault", "store"};
     headlineObjects.add(closet);
@@ -34,10 +39,9 @@ public void assign() {
 
     public void createHashMap() {
         for(int i=0;i<headlineObjects.size();i++) { // i is the key
-            String[] array = headlineObjects.get(i);
-            hashmap.put(i,array[0]); // headline
-            hashmap.put(i,array[1]); // keyword
-            hashmap.put(i,array[1] + array[2] + array[3] + array[4]); // answer choices
+
+            hashmap.put(i,headlineObjects.get(i)); // headline
+            // answer choices
 
         }
     }
