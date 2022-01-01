@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
                 username = (EditText) username.getText();
                 password = (EditText) password.getText();
 
+
+
+
+
+
                 if(username == null || password == null) {
                     Toast.makeText(getApplicationContext(), "Incorrect Log in",Toast.LENGTH_SHORT )
                     .show();
@@ -43,18 +48,23 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(reset);
                 }
                 else {
-                    Intent i=new Intent(MainActivity.this, Screen2.class);
+                    Intent f=new Intent(MainActivity.this, Screen2.class);
                     EditText[] temp = new EditText[2];
                     temp[0] = username;
                     temp[1] = password;
 
                     int count =0;
 
-                    while(headlinebank.players.size() !=count) {
-                       count++;
+                    for(int i =0;i<HeadlineBank.players.size();i++) {
+                        if (HeadlineBank.players.get(i)[0].equals(temp[0]) && HeadlineBank.players.get(i)[1].equals(temp[1]))
+                            startActivity(f);
                     }
-                    headlinebank.players.put(count,temp);
-                    startActivity(i);
+                    Toast.makeText(getApplicationContext(), "Incorrect Log in",Toast.LENGTH_SHORT )
+                                .show();
+                    HeadlineBank.SerializableParceable(username,password);
+                    }
+
+
                 }
             }
         });
